@@ -1,0 +1,328 @@
+// 1. WAF to get sum of n natural numbers
+function sum(num){
+    var sum = 0;
+   for(let i=0; i<=num; i++){
+       sum = sum + i;
+   }
+   return sum;
+}
+
+console.log(sum(10));
+
+// 2. WAF to check whether a number is even or not with if and else
+function even(num){
+   if(num%2 == 0){
+        return true;
+   }
+   else{
+       return false;
+   }
+}
+
+console.log(even(2));
+
+// 3. WAF to check whether a number is prime or not
+function prime(num){
+    var flag=0;
+    for(let i=1; i<=num; i++){
+        if((num % i ) == 0){
+            flag++;
+        }
+    }
+    if(flag == 2){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+console.log(prime(20));
+
+// 4. WAF weekDay that takes n as the input and returns the day associated to it. if n<1 or n>7 then return invalid imput. using Switch case
+
+function weekDay(n){
+
+    switch(n){
+        case 1:
+        return "monday";
+        break;
+        case 2:
+        return "tuesday";
+        break;
+        case 3:
+        return "wednesday";
+        break;
+        case 4:
+        return "thursday";
+        break;
+        case 5:
+        return "friday";
+        break;
+        case 6:
+        return "saturday";
+        break;
+        case 7:
+        return "sunday";
+        break;
+        default:
+        return "wrong input";
+    }
+}
+
+console.log(weekDay(8));
+
+
+
+// 5. WAF weekDay that takes n as the input and returns the day associated to it. if n<1 or n>7 then return invalid imput. using If Else only
+
+function weekDay(n){
+    if(!(n<1 || n>7)){
+        if(n==1){
+            return "monday";
+        }
+        else if(n==2){
+            return "tuesday";
+        }
+        else if(n==3){
+            return "wednesday";
+        }
+        else if(n==4){
+            return "thursday";
+        }
+        else if(n==5){
+            return "friday";
+        }
+        else if(n==6){
+            return "saturday";
+        }
+        else{
+            return "sunday";
+        }
+    }
+    else{
+        return "invalid input";
+    }
+}
+
+console.log(weekDay(8));
+
+// 6. WAF weekDay that takes n as the input and returns the day associated to it. using ternary operator
+var arr=[];
+arr[0] = 'Sunday' ; 
+arr[1] = 'Monday';
+arr[2] = 'Tuesday';
+arr[3] = 'Wednesday';
+arr[4] = 'Thursday';
+arr[5] = 'Friday';
+arr[6] = 'Saturday';
+
+function weekDay(x){
+  return (x < 1) || (x > 7) ? null : arr[x];
+}
+
+console.log(weekDay(2));
+
+// 7. WAF to search an element in array
+
+function search(item){
+  var arr = ["srikanth", 2, "cool"];
+  return arr.indexOf(item);
+}
+
+
+console.log(search("cool"));
+
+
+// 8.WAF to find max in array
+
+function max(arr){
+   arr.sort(function(a,b){
+       return a-b;
+   })
+   return arr[(arr.length)-1];
+}
+
+
+console.log(max([2, 1, 19, 12, 5]));
+
+// 9.WAF to find min in array
+
+   function min(arr){
+       arr.sort(function(a,b){
+           return a-b;
+       })
+       return arr[0];
+    }
+
+    console.log(min([4,3,2,1]));
+
+// 10. WAF to find factorial of n
+   function fact(num){
+    var facto=1;
+       for(let i=1; i<=num; i++){
+            facto = facto*i;
+       }
+       return facto;
+   }
+
+
+   console.log(fact(5));
+
+// 11. WAF to reverse an array
+function rev(arr){
+   return arr.reverse();
+}
+
+console.log(rev(["srikanth", "srikanthtwo", "srikanththree"]));
+
+// 12. WAF to reverse a string
+
+function stringrev(str){
+  return str.split("").reverse().join("");
+}
+
+console.log(stringrev("srikanth"));
+
+// 13. WAF to remove duplicate chars in a string
+
+function duplicateChars(str){
+    strArr = str.split("");
+    dupArr = "";
+    for(let i=0; i<strArr.length; i++){
+        if(dupArr.search(strArr[i]) == -1){
+            dupArr = dupArr + strArr[i];
+        }
+    }
+    return dupArr;
+}
+
+console.log(duplicateChars("srikaaannnth"));
+
+//14. WAF to check whether a string is a palindrome
+
+function Palind(str){
+   var rev = str.split("").reverse().join("");
+   if(str == rev){
+       return "its a palindrome";
+   }
+   else{
+       return "not a palindrome";
+   }
+}
+
+console.log(Palind("madam"));
+
+
+//15. WAF to check whether a number is a palindrome
+
+function palin(no)
+{
+var a,b,temp=0;
+
+b=no;
+while(no>0)
+{
+a=no%10;
+no=parseInt(no/10);
+temp=temp*10+a;
+}
+if(temp==b)
+{
+return "Palindrome number";
+}
+else
+{
+return "Not Palindrome number";
+}
+}
+
+console.log(palin(232));
+
+
+//16. WAF to count  the number of words in the string
+
+function words(str){
+    return str.split(" ").length;
+}
+
+console.log(words("hello how are you"));
+
+//17. WAF to print number of days in the month using switch case
+function days(month){
+    var days;
+    switch(month)
+	{
+		case  4:
+		case  6:
+		case  9:
+		case 11:
+			days=30;
+			break;
+		case  1:
+		case  3:
+		case  5:
+		case  7:
+		case  8:
+		case 10:
+		case 12:
+			days=31;
+			break;
+			
+		case 2:
+			days=28;
+			break;
+		
+		default:
+			days=0;
+			break;		
+	}
+    return days;
+}
+
+console.log(days(3));
+
+
+//18. WAF to check whether number is 0, -ve or +ve using switch case
+
+function check(num){
+    flag="";
+    switch((num === 0)? flag = "0" : (num>0)? flag = "+ve" : flag = "-ve"){
+        case 0:
+        return "zero";
+        break;
+        case "+ve":
+        return "positive";
+        break;
+        case "-ve":
+        return "negative";
+    }
+}
+
+console.log(check(-4));
+
+//19. Duplicate question already in 2nd Question
+
+//21. WAF to reverse words in string
+
+function revWord(str) {
+    return str.split("").reverse().join("").split(" ").reverse().join(" ")
+};
+
+console.log(revWord("srikanth alladi"));
+
+//22. WAF to count the occurance of a character in a given string
+
+function countOccurance(str, character){
+  var flag = 0;
+  var arr = str.split("");
+  for(let i=0; i<arr.length; i++){
+    if(arr[i] == character){
+        flag++;
+    }
+  }
+  return flag;
+}
+
+
+console.log(countOccurance("srikanthss", "s"));
