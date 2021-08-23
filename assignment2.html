@@ -1,0 +1,100 @@
+<!--Assignment 2A: Enter Number in text field and get the day-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .mt-40 {
+            margin-top: 40px;
+        }
+        
+        #output {
+            width: 300px;
+        }
+    </style>
+    <script>
+        function weekDay() {
+            var dayNum = parseInt(document.getElementById("day").value);
+            var day;
+            switch (dayNum) {
+                case 1:
+                    day = "monday";
+                    break;
+                case 2:
+                    day = "tuesday";
+                    break;
+                case 3:
+                    day = "wednesday";
+                    break;
+                case 4:
+                    day = "thursday";
+                    break;
+                case 5:
+                    day = "friday";
+                    break;
+                case 6:
+                    day = "saturday";
+                    break;
+                case 7:
+                    day = "sunday";
+                    break;
+                default:
+                    day = "Please enter within the range of 1 to 7";
+            }
+            day.toString();
+            document.getElementById("output").value = day;
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="day" placeholder="Enter a day from 1-7" />
+        <button onclick="weekDay()">Get Day</button>
+    </div>
+    <div class="mt-40">
+        <input type="text" id="output" />
+    </div>
+</body>
+
+</html>
+
+<!-- Assignment 2B: Enter words in a text area and alert number of words-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function words() {
+            var words = document.getElementById("text").value;
+            var wordsArray = words.split(" ");
+            console.log(wordsArray);
+            var count = 0;
+            for (let i = 0; i < wordsArray.length; i++) {
+                if (wordsArray[i] !== "") {
+                    count = count + 1;
+                }
+            }
+            alert("the number of words are" + "" + count);
+        }
+    </script>
+</head>
+
+<body>
+    <textarea id="text"></textarea>
+    <button onclick="words()">Count Words</button>
+</body>
+
+</html>
