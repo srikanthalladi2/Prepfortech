@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css" />
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="4"><input type="text" id="outputscreen" readonly/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="output('1')" /></td>
+            <td><input type="button" value="2" onclick="output('2')" /></td>
+            <td><input type="button" value="3" onclick="output('3')" /></td>
+            <td>
+                <input type="button" value="+" class="addition" onclick="output('+')" />
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="output('4')" /></td>
+            <td><input type="button" value="5" onclick="output('5')" /></td>
+            <td><input type="button" value="6" onclick="output('6')" /></td>
+            <td>
+                <input type="button" value="-" class="subtraction" onclick="output('-')" />
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="output('7')" /></td>
+            <td><input type="button" value="8" onclick="output('8')" /></td>
+            <td><input type="button" value="9" onclick="output('9')" /></td>
+            <td>
+                <input type="button" value="/" class="multiplication" onclick="output('/')" />
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="output('0')" /></td>
+            <td colspan="2">
+                <input type="button" value="result" id="result" onclick="result()" />
+            </td>
+            <td>
+                <input type="button" value="*" class="division" onclick="output('*')" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input type="button" value="clear" id="clear" onclick="clearscreen()" />
+            </td>
+        </tr>
+    </table>
+    <script src="/calculator.js"></script>
+</body>
+</html>
