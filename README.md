@@ -1,2 +1,2 @@
 # Prepfortech
-# This is the first Javascript Assignment with 22 questions
+# All the assignments and Projects of PrepForTech MERN stack
