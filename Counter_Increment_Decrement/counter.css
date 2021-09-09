@@ -1,0 +1,56 @@
+.d-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.pos-absolute {
+    position: absolute;
+    top: 6%;
+    right: 4%;
+}
+
+.pos-absolute .reset {
+    padding: 10px;
+    font-size: 17px;
+    background-color: #f5cfcf;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 3px 3px 8px black;
+    font-weight: bold;
+}
+
+.heading {
+    text-align: center;
+}
+
+.counter-wrap .increment {
+    padding: 16px;
+    font-size: 19px;
+    background-color: #f5efef;
+    color: black;
+    border: 1px solid black;
+    height: 58px;
+    width: 58px;
+}
+
+.counter-wrap .decrement {
+    padding: 16px;
+    font-size: 19px;
+    background-color: #f5efef;
+    color: black;
+    border: 1px solid black;
+    height: 58px;
+    width: 58px;
+}
+
+.counter-wrap .number {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 37px;
+}
+
+.counter-wrap {
+    margin-top: 15%;
+}
